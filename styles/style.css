@@ -113,6 +113,8 @@ ol {
 }
 
 .content__video-card {
+  width: 390px;
+  height: 103px;
   display: flex;
   flex-direction: row;
   align-items: start;
@@ -128,4 +130,44 @@ ol {
 
 .content__video-card-description-container {
   flex-grow: 1;
+}
+
+.search-form__fieldset-title {
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.title {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+.content__accent {
+  color: #545050;
+}
+
+.content__card-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  width: 190px; /* Добавлено специально для "..." */
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 100%;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__video-card-description {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 90%;
+  margin-top: 6px;
 }
