@@ -86,8 +86,9 @@ ol {
 
 .search-form {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
 }
 
 .content__list-container {
@@ -131,6 +132,7 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
+  flex-shrink: 0;
 }
 
 .content__video-card-description-container {
@@ -184,6 +186,10 @@ ol {
   font-weight: 400;
   font-size: 18px;
   line-height: 90%;
+  -webkit-line-clamp: 4;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .search-form__checkbox-list {
@@ -203,15 +209,19 @@ fieldset {
   width: 225px;
   height: 27px;
   border-top: 1px solid #fff;
-  border-right: none;
+  border-right: 1px solid transparent;
   border-bottom: 1px solid #fff;
-  border-left: none;
+  border-left: 1px solid transparent;
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
   font-weight: 400;
   font-size: 18px;
   background-color: transparent;
   appearance: none;
+}
+
+.search-form__textfield:active {
+  outline: 1px solid #fff;
 }
 
 .search-form__label:has(:focus-visible) {
@@ -248,7 +258,8 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .button {
   border: 1px solid #fff;
   color: #fff;
-  font-weight: 700px;
+  font-family: inherit;
+  font-weight: 700;
   font-size: 18px;
   font-style: inherit;
   text-align: center;
@@ -258,6 +269,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 .search-form__submit-button {
   width: 194px;
   height: 34px;
+  margin-top: 26px;
 }
 
 .more-button {
@@ -278,6 +290,7 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .button:active {
   background: #545050;
+  text-decoration: none;
 }
 
 .button:focus-visible {
@@ -296,4 +309,5 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::after {
 
 .content__video-card:active {
   background-color: #545050;
+  text-decoration: none;
 }
